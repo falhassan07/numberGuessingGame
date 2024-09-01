@@ -21,6 +21,7 @@ def check_answer(user_guess, actual_answer, turns):
 
 # Function to set difficulty
 def set_difficulty():
+    """Sets the difficulty level of the game. Easy for 10 guesses and hard for 5 guesses."""
     level = input("Choose a difficulty. Type 'easy' or 'hard': ")
     if level == "easy":
         return EASY_LEVEL_TURNS
