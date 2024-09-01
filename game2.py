@@ -17,3 +17,13 @@ def check_answer(user_guess, actual_answer, turns):
         return turns - 1
     else:
         print(f"You got it! The answer was {actual_answer}")
+
+
+# Function to set difficulty
+def set_difficulty():
+    level = input("Choose a difficulty. Type 'easy' or 'hard': ")
+    if level == "easy":
+        return EASY_LEVEL_TURNS
+    else:
+        return HARD_LEVEL_TURNS
+    
