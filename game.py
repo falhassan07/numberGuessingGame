@@ -4,7 +4,7 @@ from art import logo
 
 print(logo)
 print("Welcome to the Number Guessing Game!")
-print("Im thinking of a number between 1 and 100")
+print("I'm thinking of a number between 1 and 100")
 
 
 def guess_game():
@@ -18,6 +18,29 @@ def guess_game():
         lives = 10
     elif difficulty == 'hard':
         lives = 5
+
+
+    while lives > 0 and not is_game_over:
+        print(f"You have {lives} attempts remaining to guess the number.")
+        guess = int(input("Make a guess: "))
+        if guess != correct_guess:
+            lives -= 1
+            if guess < correct_guess:
+                if lives > 0:
+                    print("Too low. \nGuess again.")
+                else:
+                    print("Too low.")
+            elif guess > correct_guess:
+                if lives > 0:
+                    print("Too High. \nGuess again.")
+                else:
+                    print("Too High.")
+            if lives == 0:
+                print("You've run out of guesses, you lose.")
+
+        else:
+            print(f"You got it!. The answer was {correct_guess}.")
+            is_game_over = True
 
 
 guess_game()
