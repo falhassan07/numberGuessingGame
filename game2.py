@@ -28,3 +28,10 @@ def set_difficulty():
     else:
         return HARD_LEVEL_TURNS
     
+
+def game():
+    print(logo)
+
+
+game()
+    
